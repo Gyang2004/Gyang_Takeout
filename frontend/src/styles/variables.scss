@@ -1,0 +1,54 @@
+// 设计 token —— 来源：docs/p3/前端重构方案.md §4.7
+// 组件里统一使用 CSS 变量 var(--app-*)，不要散落硬编码颜色。
+
+$color-primary: #ffc200;
+$color-primary-soft: rgba(255, 194, 0, 0.16);
+$color-white: #fff;
+$color-text-primary: #303133;
+$color-text-regular: #606266;
+$color-text-secondary: #909399;
+$color-page-bg: #f5f7fa;
+$color-sidebar-bg: #343744;
+$color-sidebar-text: #bfcbd9;
+
+$radius-card: 8px;
+$radius-base: 4px;
+$shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+$font-size-base: 14px;
+$font-size-title: 16px;
+$font-size-heading: 18px;
+$font-size-display: 20px;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-6: 24px;
+
+:root {
+  --app-color-primary: #{$color-primary};
+  --app-color-primary-soft: #{$color-primary-soft};
+  --app-color-white: #{$color-white};
+  --app-color-text-primary: #{$color-text-primary};
+  --app-color-text-regular: #{$color-text-regular};
+  --app-color-text-secondary: #{$color-text-secondary};
+  --app-color-page-bg: #{$color-page-bg};
+  --app-color-sidebar-bg: #{$color-sidebar-bg};
+  --app-color-sidebar-text: #{$color-sidebar-text};
+
+  --app-radius-card: #{$radius-card};
+  --app-radius-base: #{$radius-base};
+  --app-shadow-card: #{$shadow-card};
+
+  --app-font-size-base: #{$font-size-base};
+  --app-font-size-title: #{$font-size-title};
+  --app-font-size-heading: #{$font-size-heading};
+  --app-font-size-display: #{$font-size-display};
+
+  --app-space-1: #{$space-1};
+  --app-space-2: #{$space-2};
+  --app-space-3: #{$space-3};
+  --app-space-4: #{$space-4};
+  --app-space-6: #{$space-6};
+}

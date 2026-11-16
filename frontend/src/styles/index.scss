@@ -1,0 +1,5 @@
+// 全局样式入口：设计 token → Element Plus 主题 → 基础样式
+// element.scss 只用于输出主题 CSS，不加 as *，避免与设计 token 的变量重名
+@use './variables.scss' as *;
+@use './element.scss';
+@use './base.scss' as *;

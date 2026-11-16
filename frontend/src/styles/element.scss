@@ -1,0 +1,25 @@
+// Element Plus 主题：主色沿用旧版菜单高亮色 #ffc200
+// 说明见 docs/p3/前端重构方案.md §4.7
+@use './variables.scss' as *;
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': $color-primary,
+    ),
+  ),
+);
+
+@use 'element-plus/theme-chalk/src/index.scss' as *;
+
+// 黄色主色配白字对比度不足，主按钮文字改为深色
+.el-button--primary {
+  --el-button-text-color: #{$color-text-primary};
+  --el-button-hover-text-color: #{$color-text-primary};
+  --el-button-active-text-color: #{$color-text-primary};
+}
+
+:root {
+  --el-border-radius-base: #{$radius-base};
+  --el-card-border-radius: #{$radius-card};
+}
