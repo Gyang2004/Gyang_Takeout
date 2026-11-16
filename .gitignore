@@ -1,0 +1,44 @@
+# ===== 依赖与构建产物 =====
+node_modules/
+dist/
+dist-ssr/
+coverage/
+.vite/
+target/
+out/
+build/
+*.class
+*.iml
+.idea/
+
+# ===== Nginx 运行时（保留 conf/、html/、contrib/、docs/） =====
+nginx/nginx.exe
+nginx/logs/
+nginx/temp/
+nginx/*.pid
+nginx/*.log
+web/nginx.exe
+web/logs/
+web/temp/
+web/*.pid
+web/*.log
+
+# ===== 本地配置与口令 =====
+backend/**/application-dev.yml
+backend/**/application-test.yml
+backend/**/application-local.yml
+application-local.*
+.env
+.env.*
+!.env.example
+# 前端无密钥的环境配置需要入库，保证构建可复现
+!frontend/.env.development
+!frontend/.env.production
+!frontend/.env.example
+
+# ===== 系统、编辑器与日志 =====
+.DS_Store
+Thumbs.db
+.vscode/
+logs/
+*.log
