@@ -27,6 +27,8 @@ web/*.log
 backend/**/application-dev.yml
 backend/**/application-test.yml
 backend/**/application-local.yml
+# 真实密钥文件忽略，application-secret.example.yml 作为模板入库
+backend/**/application-secret.yml
 application-local.*
 .env
 .env.*

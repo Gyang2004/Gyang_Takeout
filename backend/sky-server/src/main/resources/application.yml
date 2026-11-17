@@ -6,7 +6,8 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
   profiles:
-    active: dev
+    # dev：数据库等本地配置；secret：JWT 密钥（application-secret.yml 已 gitignore）
+    active: dev,secret
   main:
     allow-circular-references: true
   datasource:
@@ -36,10 +37,9 @@ logging:
     dateformat: HH:mm:ss:SSS
 sky:
   jwt:
-    # 设置jwt签名加密时使用的秘钥
-    admin-secret-key: itcast
-    # 设置jwt过期时间
-    admin-ttl: 7200000000
+    # 密钥放在 application-secret.yml（已 gitignore），通过 secret profile 加载
+    # 设置jwt过期时间：86400000 毫秒 = 1 天
+    admin-ttl: 86400000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
 
