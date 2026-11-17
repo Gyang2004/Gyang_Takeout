@@ -48,7 +48,7 @@ Gyang_Takeout/
 | Nginx（旧产物） | http://localhost | 静态托管旧前端 + `/api` 反向代理 |
 | 接口文档 | http://localhost:8080/doc.html | Knife4j，启动后验证 |
 
-> 数据库连接配置从 `application-dev.example.yml` 复制为 `application-dev.yml` 后填写；真实口令不入库。启动步骤待前后端跑通后补充。
+> 本地配置：`application-dev.example.yml` → `application-dev.yml`（数据库连接）；`application-secret.example.yml` → `application-secret.yml`（JWT 密钥）。两者都已被 `.gitignore` 忽略，真实口令/密钥不入库。`application.yml` 通过 `spring.profiles.active: dev,secret` 加载这两个配置。启动步骤待前后端跑通后补充。
 
 ## 部署（规划）
 
