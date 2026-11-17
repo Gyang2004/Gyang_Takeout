@@ -1,63 +1,53 @@
 <script setup>
-import { useRouter } from 'vue-router'
 import { useUserStore } from '@/stores/user'
 
-const router = useRouter()
 const userStore = useUserStore()
-
-/**
- * 退出登录并回到登录页。
- * @returns {Promise<void>}
- */
-async function handleLogout() {
-  await userStore.logout()
-  router.replace('/login')
-}
 </script>
 
 <template>
-  <div class="dashboard-placeholder">
+  <div class="dashboard-page">
     <el-card class="welcome-card" shadow="never">
-      <h2>登录成功</h2>
-      <p class="welcome-text">欢迎回来，{{ userStore.name || userStore.userName || '管理员' }}。</p>
-      <p class="muted">
-        工程骨架与登录闭环已完成。布局、菜单与业务模块将按「一个模块开发 → 验收 → 下一个」推进。
-      </p>
-      <el-button type="primary" @click="handleLogout">退出登录</el-button>
+      <div class="welcome-head">
+        <div>
+          <h2>欢迎回来，{{ userStore.name || userStore.userName || '管理员' }}</h2>
+          <p>工作台数据将在后端 report 接口实现后接入。</p>
+        </div>
+        <el-tag type="info" effect="plain">功能开发中</el-tag>
+      </div>
+    </el-card>
+
+    <el-card class="placeholder-card" shadow="never">
+      <el-empty description="工作台统计、订单概览与菜品/套餐数据待接入" />
     </el-card>
   </div>
 </template>
 
 <style scoped lang="scss">
-.dashboard-placeholder {
+.dashboard-page {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: var(--app-space-6);
+  flex-direction: column;
+  gap: var(--app-space-4);
 }
 
-.welcome-card {
-  width: 100%;
-  max-width: 560px;
-  padding: var(--app-space-4);
+.welcome-card,
+.placeholder-card {
   border-radius: var(--app-radius-card);
-  box-shadow: var(--app-shadow-card);
 }
 
-.welcome-card h2 {
+.welcome-head {
+  display: flex;
+  gap: var(--app-space-4);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.welcome-head h2 {
   font-size: var(--app-font-size-display);
   color: var(--app-color-text-primary);
 }
 
-.welcome-text {
-  margin-top: var(--app-space-3);
-  color: var(--app-color-text-regular);
-}
-
-.muted {
-  margin: var(--app-space-2) 0 var(--app-space-6);
-  line-height: 1.7;
+.welcome-head p {
+  margin-top: var(--app-space-2);
   color: var(--app-color-text-secondary);
 }
 </style>

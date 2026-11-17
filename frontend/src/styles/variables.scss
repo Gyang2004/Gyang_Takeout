@@ -8,8 +8,12 @@ $color-text-primary: #303133;
 $color-text-regular: #606266;
 $color-text-secondary: #909399;
 $color-page-bg: #f5f7fa;
+$color-border: #e4e7ed;
 $color-sidebar-bg: #343744;
 $color-sidebar-text: #bfcbd9;
+$color-sidebar-hover: rgba(255, 255, 255, 0.08);
+$color-sidebar-active-bg: rgba(255, 194, 0, 0.12);
+$color-sidebar-border: rgba(255, 255, 255, 0.08);
 
 $radius-card: 8px;
 $radius-base: 4px;
@@ -34,8 +38,12 @@ $space-6: 24px;
   --app-color-text-regular: #{$color-text-regular};
   --app-color-text-secondary: #{$color-text-secondary};
   --app-color-page-bg: #{$color-page-bg};
+  --app-color-border: #{$color-border};
   --app-color-sidebar-bg: #{$color-sidebar-bg};
   --app-color-sidebar-text: #{$color-sidebar-text};
+  --app-color-sidebar-hover: #{$color-sidebar-hover};
+  --app-color-sidebar-active-bg: #{$color-sidebar-active-bg};
+  --app-color-sidebar-border: #{$color-sidebar-border};
 
   --app-radius-card: #{$radius-card};
   --app-radius-base: #{$radius-base};
